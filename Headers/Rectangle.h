@@ -1,6 +1,7 @@
 #pragma once
 #include "Segment.h"
 #include <vector>
+#include <iostream>
 
 class Rectangle
 {
@@ -15,15 +16,7 @@ public:
     int getLeftDownPoint_Y();
     int getRightUpperPoint_X();
     int getRightUpperPoint_Y();
-    
+    void print();
     Rectangle(Point leftDownPoint, Point rightUpperPoint);
-    ~Rectangle();
+    ~Rectangle() = default;
 };
-
-Rectangle::Rectangle(Point leftDownPoint, Point rightUpperPoint)
-{
-    this->_leftDownPoint = leftDownPoint;
-    this->_rightUpperPoint = rightUpperPoint;
-}
-
-

@@ -41,3 +41,19 @@ Point GeneratorTests::createNewPoint()
     newPoint.y = Randomizator(MIN_COUNT, MAX_COUNT);
     return newPoint;
 }
+
+
+int GeneratorTests::getCountOfRectangles_N()
+{
+    return _countOfRectangles_N;
+}
+
+int GeneratorTests::getCountOfCoating_K()
+{
+    return _countOfCoating_K;
+}
+
+std::vector<Rectangle> GeneratorTests::getRectanglesRoster()
+{
+    return _rectanglesRoster;
+}
