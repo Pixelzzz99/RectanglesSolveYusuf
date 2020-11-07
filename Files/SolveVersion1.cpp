@@ -2,7 +2,9 @@
 
 SolveVersion1::SolveVersion1(GeneratorTests test)
 {
-    //TODO
+    setCountOfRectangle_N(test.getCountOfRectangles_N());
+    setCountOfRectangle_K(test.getCountOfCoating_K());
+    setRectanglesCoordinates(test.getRectanglesRoster());
 }
 
 SolveVersion1::SolveVersion1(int count_n, int count_k, std::vector<Rectangle> rectangles)

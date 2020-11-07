@@ -7,7 +7,7 @@ class GeneratorTests
 {
 private:
     int MIN_COUNT = 1;
-    int MAX_COUNT = 100;
+    int MAX_COUNT = 80;
 
     int _countOfRectangles_N;
     int _countOfCoating_K;

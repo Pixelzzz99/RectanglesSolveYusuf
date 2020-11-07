@@ -6,8 +6,15 @@ GeneratorTests::GeneratorTests()
 {
     srand(time(nullptr));
     _countOfRectangles_N = Randomizator(MIN_COUNT, MAX_COUNT);
-    _countOfCoating_K = Randomizator(MIN_COUNT, MAX_COUNT);
+    _countOfCoating_K = Randomizator(MIN_COUNT, _countOfRectangles_N);
     _rectanglesRoster = createRectanglesRoster(_countOfRectangles_N);
+}
+
+
+int GeneratorTests::Randomizator(int min, int max)
+{
+    static const double fraction = 1.0 / (static_cast<double>(RAND_MAX) + 1.0); 
+    return static_cast<int>(rand() * fraction * (max - min + 1) + min);
 }
 
 std::vector<Rectangle> GeneratorTests::createRectanglesRoster(int countRectangles)
@@ -17,6 +24,7 @@ std::vector<Rectangle> GeneratorTests::createRectanglesRoster(int countRectangle
     {
         newRectanlesRoster.push_back(createNewRectangle());
     }
+    return newRectanlesRoster;
 }
 
 Rectangle GeneratorTests::createNewRectangle()
