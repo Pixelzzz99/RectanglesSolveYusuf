@@ -7,7 +7,7 @@ class GeneratorTests
 {
 private:
     int MIN_COUNT = 1;
-    int MAX_COUNT = 80;
+    int MAX_COUNT = 10;
 
     int _countOfRectangles_N;
     int _countOfCoating_K;
@@ -15,11 +15,14 @@ private:
     int Randomizator(int min, int max);
     std::vector<Rectangle> createRectanglesRoster(int);
     Rectangle createNewRectangle();
-    Point createNewPoint();
-
+    
+    Point createPoint();
+    
 public:
     GeneratorTests();
     GeneratorTests(int n, int k);
+    
+    GeneratorTests(int n, int k, std::vector<Rectangle> roster);
     ~GeneratorTests();
 
     int getCountOfRectangles_N();

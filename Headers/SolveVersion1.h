@@ -23,6 +23,7 @@ public:
     ~SolveVersion1() = default;
     int getSteps();
     void setSteps(int);
+
     int solve(std::vector<Rectangle> &) override;
 };
 
