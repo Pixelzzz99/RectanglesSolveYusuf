@@ -10,6 +10,12 @@ GeneratorTests::GeneratorTests()
     _rectanglesRoster = createRectanglesRoster(_countOfRectangles_N);
 }
 
+GeneratorTests::GeneratorTests(int n, int k)
+{
+    _countOfRectangles_N = n;
+    _countOfCoating_K = k;
+    _rectanglesRoster = createRectanglesRoster(_countOfRectangles_N);
+}
 
 int GeneratorTests::Randomizator(int min, int max)
 {

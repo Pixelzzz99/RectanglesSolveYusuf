@@ -19,6 +19,7 @@ private:
 
 public:
     GeneratorTests();
+    GeneratorTests(int n, int k);
     ~GeneratorTests();
 
     int getCountOfRectangles_N();
